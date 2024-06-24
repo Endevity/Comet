@@ -1,0 +1,416 @@
+/* Fonts */
+@font-face {
+    font-family: "BDO";
+    src: url(/fonts/BDOGrotesk-Regular.woff) format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "BDO";
+    src: url(/fonts/BDOGrotesk-DemiBold.woff) format("woff");
+    font-weight: bold;
+}
+
+/* Universal */
+:root {
+    --color1: #FFFFFF;
+    --color2: #000000;
+    --color3: #EED7B2;
+    --color4: #A07361;
+    --color5: hsla(0, 0%, 0%, 0.25);
+    --color6: #D9D9D9;
+    --gradientcolor1: #BF953F;
+    --gradientcolor2: #FCF6BA;
+    --gradientcolor3: #FBF587;
+    --gradientcolor4: #B38728;
+    --gradientcolor5: #AA771C;
+    --gradientcolor6: #C0C0C0;
+    --gradientcolor7: #B1B1B1;
+    --gradientcolor8: #A2A2A2;
+    --gradientcolor9: #CFCFCF;
+    --smallshadow: 0 3px 2px var(--color5);
+    --bigshadow: 0 5px 2px var(--color5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    max-width: 480px;
+    margin: 0 auto;
+    font-family: BDO, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--color1);
+    background: var(--color5);
+}
+
+#root {
+    height: 100vh;
+    background: linear-gradient(var(--color3), var(--color4)) no-repeat center fixed;
+}
+
+/* PC Platform */
+.pc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pc h1 {
+    display: flex;
+    align-items: center; 
+    height: 200px;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-shadow: 0 5px 2px var(--color5);
+    margin-bottom: 75px;
+    padding-top: 50px;
+}
+
+.pc canvas {
+    box-shadow: 0 5px 2px var(--color5);
+    border-radius: 30px;
+}
+
+.telegram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    text-shadow: 0 5px 2px var(--color5);
+    margin-top: 75px;
+    margin-bottom: 138px;
+}
+
+.telegram img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.version-qr {
+    width: 300px;
+    height: 30px;
+    font-size: 25px;
+    text-shadow: 0 5px 2px var(--color5);
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+/* Mobile Platform */
+.mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.amount-display {
+    width: 387.07px;
+    height: 56.57px;
+    border: 3px solid transparent;
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from -140deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+    border-radius: 29.63px;
+    box-shadow: var(--bigshadow);
+}
+
+.amount-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 262.21px;
+    height: 56.57px;
+    font-size: 32px;
+    text-align: center;
+    color: var(--color2);
+    text-shadow: var(--smallshadow);
+}
+
+.small-token {
+    float: left;
+    width: 59.57px;
+    height: 56.57px;
+}
+
+.earn {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    margin-top: 160px;
+    margin-bottom: 168px;
+    transform: rotate(25deg);
+}
+
+.buttons-grid {
+    display: grid;
+    width: 400px;
+    height: 110px;
+    grid-template-columns: 73px 73px 73px 73px 73px;
+    grid-template-rows: 100px;
+    gap: 9px;
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 73px;
+    height: 100px;
+    color: var(--color2);
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: var(--color6);
+    border-radius: 13.65px;
+    border: 3px solid transparent;
+    box-shadow: var(--bigshadow);
+    text-shadow: var(--smallshadow);
+}
+
+.button img {
+    width: 60px;
+    height: 60px;
+}
+
+.button p {
+    width: 73px;
+    height: 31px;
+    text-align: center;
+}
+
+.active {
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+}
+
+.inactive {
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+}
+
+.version {
+    width: 300px;
+    height: 30px;
+    font-size: 25px;
+    text-shadow: var(--bigshadow);
+    text-transform: uppercase;
+}
+
+.tasks-div {
+    width: 400px;
+    height: 450px;
+    text-transform: uppercase;
+    color: var(--color2);
+    background-color: var(--color6);
+    margin-top: 110px;
+    margin-bottom: 110px;
+    border: 4px solid transparent;
+    border-radius: 38.1px;
+    box-shadow: var(--bigshadow);
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+}
+
+.tasks-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 337.78px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.tasks-div hr {
+    width: 337.78px;
+    margin: auto;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+}
+
+.task-container {
+    padding-left: 33.33px;
+    padding-right: 33.33px;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+
+.task {
+    margin-bottom: 20px;
+}
+
+.task img {
+    float: left;
+}
+
+.task-image {
+    width: 40px;
+    height: 45px;
+}
+
+.task-token {
+    width: 21.29px;
+    height: 21.29px;
+}
+
+.task p {
+    text-shadow: var(--smallshadow);
+}
+
+.task-p {
+    width: 200px;
+    height: 22.5px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.task-reward {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 44.44px;
+    height: 22.5px;
+    font-size: 11px;
+}
+
+.task-button {
+    float: right;
+    width: 82.22px;
+    height: 45px;
+    background-color: var(--color1);
+    border-radius: 50px;
+    transform: translateY(-100%);
+}
+
+.task-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    text-shadow: var(--smallshadow);
+}
+
+.boosts-div {
+    width: 400px;
+    height: 450px;
+    text-transform: uppercase;
+    color: var(--color2);
+    background-color: var(--color6);
+    margin-top: 110px;
+    margin-bottom: 110px;
+    border: 4px solid transparent;
+    border-radius: 38.1px;
+    box-shadow: var(--bigshadow);
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+}
+
+.boosts-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 337.78px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.boosts-div hr {
+    width: 337.78px;
+    margin: auto;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+}
+
+.boost-container {
+    padding-left: 33.33px;
+    padding-right: 33.33px;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+
+.profile-div {
+    width: 400px;
+    height: 450px;
+    text-transform: uppercase;
+    color: var(--color2);
+    background-color: var(--color6);
+    margin-top: 110px;
+    margin-bottom: 110px;
+    border: 4px solid transparent;
+    border-radius: 38.1px;
+    box-shadow: var(--bigshadow);
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+}
+
+.profile-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 337.78px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.profile-div hr {
+    width: 337.78px;
+    margin: auto;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+}
+
+.profile-container {
+    padding-left: 33.33px;
+    padding-right: 33.33px;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+
+.profile img {
+    float: left;
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+
+.donate-div {
+    width: 400px;
+    height: 450px;
+    text-transform: uppercase;
+    color: var(--color2);
+    background-color: var(--color6);
+    margin-top: 110px;
+    margin-bottom: 110px;
+    border: 4px solid transparent;
+    border-radius: 38.1px;
+    box-shadow: var(--bigshadow);
+    background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+}
+
+.donate-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 337.78px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.donate-div hr {
+    width: 337.78px;
+    margin: auto;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+}
+
+.donate-container {
+    padding-left: 33.33px;
+    padding-right: 33.33px;
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
