@@ -1,3 +1,5 @@
+import { TonConnectButton } from "@tonconnect/ui-react";
+
 const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDonateUI }) => {
     return(
         <div className="mobile">
@@ -34,9 +36,7 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
                         </div>
                     </div>
                     <img src="/more.png" alt="page" className="dots"/>
-                    <div className="connect">
-                        <p>Connect Wallet</p>
-                    </div>
+                    <TonConnectButton className="connect" style={{ margin: "0 auto" }}/>
                 </div>   
             </div>
             <div className="buttons-grid">

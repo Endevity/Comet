@@ -424,22 +424,6 @@ span {
     margin-bottom: 6px;
 }
 
-.connect {
-    width: 337.78px;
-    height: 37.5px;
-    background: linear-gradient(var(--color3), var(--color4));
-    border-radius: 38.1px;
-}
-
-.connect p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 337.78px;
-    height: 37.5px;
-    color: var(--color1);
-}
-
 .donate-div {
     width: 400px;
     height: 450px;
