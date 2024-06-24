@@ -1,3 +1,5 @@
+import { Platform } from "react-native";
+
 const Donate = ({amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfileUI }) => {
     return(
             <div className="mobile">

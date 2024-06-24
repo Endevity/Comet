@@ -9,24 +9,33 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
                 <p className="profile-headline">Profile</p>
                 <hr />
                 <div className="profile-container">
-                    <div className="profile">
+                    <div className="profile-info">
                         <img src="/Avatar.jpg" alt="Avatar" />
+                        <div className="profile-info-grid">
+                            <p>Username:<span> @RaiRaijin</span></p>
+                            <p>Playtime: 00D 00H 00M</p>
+                            <p>Alpha Tester: No / Yes</p>
+                            <p>Donator: No / Yes</p>
+                        </div>
                     </div>
                     <hr />
-                    <div className="profile">
-
+                    <div className="achievement-grid">
+                        <div className="achievement-item">
+                            <p>Tap 1000 times</p>
+                            <img src="/Avatar.jpg" alt="achievement" />
+                        </div>
+                        <div className="achievement-item">
+                            <p>Collect 500000 coins</p>
+                            <img src="/Avatar.jpg" alt="achievement" />
+                        </div>
+                        <div className="achievement-item">
+                            <p>Play for 24 hours</p>
+                            <img src="/Avatar.jpg" alt="achievement" />
+                        </div>
                     </div>
-                    <div className="profile">
-
-                    </div>
-                    <div className="profile">
-
-                    </div>
-                    <div className="profile">
-
-                    </div>
-                    <div className="profile">
-
+                    <img src="/more.png" alt="page" className="dots"/>
+                    <div className="connect">
+                        <p>Connect Wallet</p>
                     </div>
                 </div>   
             </div>
