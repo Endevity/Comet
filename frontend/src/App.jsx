@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import Earn from "./earn.jsx";
 import Tasks from "./tasks.jsx";
 import Boosts from "./boosts.jsx";
