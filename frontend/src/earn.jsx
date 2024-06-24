@@ -1,5 +1,4 @@
-const Earn = ({ amount, handleCoinClick, handleTasksUI, handleBoostsUI, handleProfileUI, handleDonateUI }) => {
-    
+const Earn = ({ amount, handleCoinClick, handleTasksUI, handleBoostsUI, handleProfileUI, handleDonateUI }) => {  
     return (
         <div className="mobile">
             <div className="amount-display">

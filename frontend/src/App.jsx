@@ -8,9 +8,7 @@ import Donate from "./donate.jsx";
 import PC from "./pc.jsx";
 
 const App = () => {
-
     if(!isMobile){
-
         const [amount, setAmount] = useState(0);
         const [showTasks, setShowTasks] = useState(false);
         const [buyBoosts, setBuyBoosts] = useState(false);
@@ -98,7 +96,7 @@ const App = () => {
                 amount={formatAmount(amount)} 
                 handleBoostsUI={handleBoostsUI} 
                 handleTasksUI={handleTasksUI} 
-                handleEarnUI={handleEarnUI} 
+                handleEarnUI={handleEarnUI}
                 handleProfileUI={handleProfileUI}/>
             );
         } else {

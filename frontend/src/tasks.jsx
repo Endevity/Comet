@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const Tasks = ({ amount, setAmount, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
-
     const [doneTaskOne, setDoneTaskOne] = useState(false);
     const [claimedTaskOne, setClaimedTaskOne] = useState(false);
     const [doneTaskTwo, setDoneTaskTwo] = useState(false);

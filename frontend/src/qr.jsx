@@ -1,7 +1,6 @@
 import { QRCode } from "react-qrcode-logo";
 
 const QR = () => {
-    
     return (
         <QRCode
             value="https://t.me/CloverLeafCoinbot"
@@ -14,8 +13,7 @@ const QR = () => {
                 { outer: [20, 20, 20, 20], inner: [5, 5, 5, 5] },
                 { outer: [20, 20, 20, 20], inner: [5, 5, 5, 5] },
                 { outer: [20, 20, 20, 20], inner: [5, 5, 5, 5] },
-            ]}
-            
+            ]}       
         />
     );
 }

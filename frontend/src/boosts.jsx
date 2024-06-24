@@ -1,5 +1,4 @@
 const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
-    
     return(
         <div className="mobile">
             <div className="amount-display">
