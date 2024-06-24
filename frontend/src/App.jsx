@@ -58,7 +58,7 @@ const App = () => {
 
         const formatAmount = (amount) => {
             if (amount >= 1000000) {
-                return (amount / 1000000).toFixed(2) + " M";
+                return (amount / 1000000).toFixed(3) + " M";
             }
 
             return amount.toString();
