@@ -2,7 +2,7 @@ const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDo
     return(
         <div className="mobile">
             <div className="amount-display">
-                <img src="Token-Small.png" alt="Token" className="small-token" />
+                <img src="../src/assets/images/Token-Small.png" alt="Token" className="small-token" />
                 <div className="amount-text">{amount}</div>
             </div>
             <div className="boosts-div">
@@ -31,23 +31,23 @@ const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDo
             </div>
             <div className="buttons-grid">
                 <div className="button active">
-                    <img src="/Boost.svg" alt="Boost"/>
+                    <img src="../src/assets/images/Boost.svg" alt="Boost"/>
                     <p>Boosts</p>
                 </div>
                 <div className="button inactive" onClick={handleTasksUI}>
-                    <img src="/Tasks.svg" alt="Tasks" />
+                    <img src="../src/assets/images/Tasks.svg" alt="Tasks" />
                     <p>Tasks</p>
                 </div>
                 <div className="button inactive">
-                    <img src="/Token-Small.png" alt="Tap" onClick={handleEarnUI}/>
+                    <img src="../src/assets/images/Token-Small.png" alt="Tap" onClick={handleEarnUI}/>
                     <p>Earn</p>
                 </div>
                 <div className="button inactive">
-                    <img src="/Profile.svg" alt="Profile" onClick={handleProfileUI}/>
+                    <img src="../src/assets/images/Profile.svg" alt="Profile" onClick={handleProfileUI}/>
                     <p>Profile</p>
                 </div>
                 <div className="button inactive">
-                    <img src="/Donate.svg" alt="Donate" onClick={handleDonateUI}/>
+                    <img src="../src/assets/images/Donate.svg" alt="Donate" onClick={handleDonateUI}/>
                     <p>Donate</p>
                 </div>
             </div>

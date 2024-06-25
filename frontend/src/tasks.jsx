@@ -103,7 +103,7 @@ const Tasks = ({ amount, setAmount, handleBoostsUI, handleEarnUI, handleProfileU
     return (
         <div className="mobile">
             <div className="amount-display">
-                <img src="Token-Small.png" alt="Token" className="small-token" />
+                <img src="../src/assets/images/Token-Small.png" alt="Token" className="small-token" />
                 <div className="amount-text">{amount}</div>
             </div>
             <div className="tasks-div">
@@ -111,54 +111,54 @@ const Tasks = ({ amount, setAmount, handleBoostsUI, handleEarnUI, handleProfileU
                 <hr />
                 <div className="task-container">
                     <div className="task">
-                        <img src="/Task.svg" alt="Task" className="task-image" />
+                        <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Join telegram</p>
-                        <img src="/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
                         <p className="task-reward">50000</p>
                         <div className="task-button">
                             <div onClick={handleTaskOne}>Go</div>
                         </div>
                     </div>
                     <div className="task">
-                        <img src="/Task.svg" alt="Task" className="task-image" />
+                        <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Follow X</p>
-                        <img src="/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
                         <p className="task-reward">40000</p>
                         <div className="task-button">
                             <div onClick={handleTaskTwo}>Go</div>
                         </div>
                     </div>
                     <div className="task">
-                        <img src="/Task.svg" alt="Task" className="task-image" />
+                        <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Connect Wallet</p>
-                        <img src="/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
                         <p className="task-reward">125000</p>
                         <div className="task-button">
                             <div onClick={handleTaskThree}>Go</div>
                         </div>
                     </div>
                     <div className="task">
-                        <img src="/Task.svg" alt="Task" className="task-image" />
+                        <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Play for 24 hours</p>
-                        <img src="/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
                         <p className="task-reward">800000</p>
                         <div className="task-button">
                             <div onClick={handleTaskFour}>Go</div>
                         </div>
                     </div>
                     <div className="task">
-                        <img src="/Task.svg" alt="Task" className="task-image" />
+                        <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Collect 500000 Coins</p>
-                        <img src="/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
                         <p className="task-reward">300000</p>
                         <div className="task-button">
                             <div onClick={handleTaskFive}>Go</div>
                         </div>
                     </div>
                     <div className="task">
-                        <img src="/Task.svg" alt="Task" className="task-image" />
+                        <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Tap 1000 times</p>
-                        <img src="/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
                         <p className="task-reward">55000</p>
                         <div className="task-button">
                             <div onClick={handleTaskSix}>Go</div>
@@ -168,23 +168,23 @@ const Tasks = ({ amount, setAmount, handleBoostsUI, handleEarnUI, handleProfileU
             </div>
             <div className="buttons-grid">
                 <div className="button inactive">
-                    <img src="/Boost.svg" alt="Boost" onClick={handleBoostsUI} />
+                    <img src="../src/assets/images/Boost.svg" alt="Boost" onClick={handleBoostsUI} />
                     <p>Boosts</p>
                 </div>
                 <div className="button active">
-                    <img src="/Tasks.svg" alt="Tasks" />
+                    <img src="../src/assets/images/Tasks.svg" alt="Tasks" />
                     <p>Tasks</p>
                 </div>
                 <div className="button inactive">
-                    <img src="/Token-Small.png" alt="Tap" onClick={handleEarnUI} />
+                    <img src="../src/assets/images/Token-Small.png" alt="Tap" onClick={handleEarnUI} />
                     <p>Earn</p>
                 </div>
                 <div className="button inactive">
-                    <img src="/Profile.svg" alt="Profile" onClick={handleProfileUI} />
+                    <img src="../src/assets/images/Profile.svg" alt="Profile" onClick={handleProfileUI} />
                     <p>Profile</p>
                 </div>
                 <div className="button inactive">
-                    <img src="/Donate.svg" alt="Donate" onClick={handleDonateUI} />
+                    <img src="../src/assets/images/Donate.svg" alt="Donate" onClick={handleDonateUI} />
                     <p>Donate</p>
                 </div>
             </div>
