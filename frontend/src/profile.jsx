@@ -1,6 +1,39 @@
+import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
+import { BsThreeDots } from "react-icons/bs";
 import { TonConnectButton } from "@tonconnect/ui-react";
+        
+const achievementSets = [
+    [
+      { text: 'Be an Alpha Tester', imgSrc: '../src/assets/images/Avatar.jpg' },
+      { text: 'Tap 1000 times', imgSrc: '../src/assets/images/Avatar.jpg' },
+      { text: 'Collect 500000 coins', imgSrc: '../src/assets/images/Avatar.jpg' },
+    ],
+    [
+      { text: 'Be an Alpha Tester', imgSrc: '../src/assets/images/Avatar.jpg' },
+      { text: 'Collect 10 Million Coins', imgSrc: '../src/assets/images/Avatar.jpg' },
+      { text: 'Play for 24 hours', imgSrc: '../src/assets/images/Avatar.jpg' },
+    ],
+  ];
 
 const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDonateUI }) => {
+    const [currentSet, setCurrentSet] = useState(0);
+
+    const handleSwipeLeft = () => {
+        setCurrentSet((prevSet) => (prevSet + 1) % achievementSets.length);
+    };
+
+    const handleSwipeRight = () => {
+        setCurrentSet((prevSet) => (prevSet - 1 + achievementSets.length) % achievementSets.length);
+    };
+
+    const handlers = useSwipeable({
+        onSwipedLeft: handleSwipeLeft,
+        onSwipedRight: handleSwipeRight,
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+    });
+
     return(
         <div className="mobile">
             <div className="amount-display">
@@ -21,21 +54,17 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
                         </div>
                     </div>
                     <hr />
-                    <div className="achievement-grid">
-                        <div className="achievement-item">
-                            <p>Tap 1000 times</p>
-                            <img src="../src/assets/images/Avatar.jpg" alt="achievement" />
-                        </div>
-                        <div className="achievement-item">
-                            <p>Collect 500000 coins</p>
-                            <img src="../src/assets/images/Avatar.jpg" alt="achievement" />
-                        </div>
-                        <div className="achievement-item">
-                            <p>Play for 24 hours</p>
-                            <img src="../src/assets/images/Avatar.jpg" alt="achievement" />
+                    <div className="achievement-container" {...handlers}>
+                        <div className="achievement-grid">
+                        {achievementSets[currentSet].map((item, index) => (
+                            <div key={index} className="achievement-item">
+                                <p>{item.text}</p>
+                                <img src={item.imgSrc} alt="achievement" />
+                            </div>
+                            ))}
                         </div>
                     </div>
-                    <img src="../src/assets/images/more.png" alt="page" className="dots"/>
+                    <BsThreeDots className="dots"/>
                     <TonConnectButton className="connect" style={{ margin: "0 auto" }}/>
                 </div>   
             </div>

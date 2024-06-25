@@ -4,7 +4,7 @@ const QR = () => {
     return (
         <QRCode
             value="https://t.me/CloverLeafCoinbot"
-            size={280}
+            size={200}
             bgColor="#FFFFFF"
             fgColor="#000000"
             level="Q"
