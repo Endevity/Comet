@@ -1,4 +1,4 @@
-const Donate = ({amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfileUI }) => {
+const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfileUI }) => {
     return(
             <div className="mobile">
                 <div className="amount-display">

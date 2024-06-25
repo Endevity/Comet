@@ -6,7 +6,7 @@ import "./index.css";
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TonConnectUIProvider manifestUrl="localhost:5173/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="http://localhost:5173/tonconnect-manifest.json">
       <App />
     </TonConnectUIProvider> 
   </React.StrictMode>

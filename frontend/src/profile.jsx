@@ -5,7 +5,7 @@ import { TonConnectButton } from "@tonconnect/ui-react";
         
 const achievementSets = [
     [
-      { text: 'Be an Alpha Tester', imgSrc: '../src/assets/images/Avatar.jpg' },
+      { text: 'Log in 7 days in a row', imgSrc: '../src/assets/images/Avatar.jpg' },
       { text: 'Tap 1000 times', imgSrc: '../src/assets/images/Avatar.jpg' },
       { text: 'Collect 500000 coins', imgSrc: '../src/assets/images/Avatar.jpg' },
     ],
