@@ -1,5 +1,5 @@
 {
-    "url": "http://localhost:5173/tonconnect-manifest.json",
+    "url": "https://localhost:5173/tonconnect-manifest.json",
     "name": "App",
-    "iconUrl": "http://localhost:5173/react.svg"
+    "iconUrl": "https://localhost:5173/react.svg"
 }
