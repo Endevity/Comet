@@ -1,11 +1,11 @@
-const Earn = ({ amount, handleCoinClick, handleTasksUI, handleBoostsUI, handleProfileUI, handleDonateUI }) => {  
+const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handleProfileUI, handleDonateUI }) => {  
     return (
         <div className="mobile">
             <div className="amount-display">
                 <img src="../src/assets/images/Token-Small.png" alt="Token" className="small-token" />
                 <div className="amount-text">{amount}</div>
             </div>
-            <img src="../src/assets/images/Token-Big.png" alt="Coin" className="earn" onClick={handleCoinClick} />
+            <img src="../src/assets/images/Token-Big.png" alt="Coin" className="earn" onClick={handleTapEvent} />
             <div className="buttons-grid">
                 <div className="button inactive">
                     <img src="../src/assets/images/Boost.svg" alt="Boost" onClick={handleBoostsUI}/>

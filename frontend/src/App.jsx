@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import Earn from "./earn.jsx";
 import Tasks from "./tasks.jsx";
-import Boosts from "./boosts.jsx";
+import Boosts, { coinsPerClick } from "./boosts.jsx";
 import Profile from "./profile.jsx";
 import Donate from "./donate.jsx";
 import PC from "./pc.jsx";
@@ -15,7 +15,9 @@ const App = () => {
         const [earnCoins, setEarnCoins] = useState(false);
         const [showProfile, setShowProfile] = useState(false);
         const [showDonate, setShowDonate] = useState(false);
-        const [coinsPerClick, setCoinsPerClick] = useState(1);
+        
+        let tap = useRef(0);
+        let collect = useRef(0);
         
         const resetStates = () => {
             setShowTasks(false);
@@ -25,33 +27,47 @@ const App = () => {
             setShowDonate(false);
         };
 
-        const handleCoinClick = () => {
+        const handleCoin = () => {
             setAmount(a => a + coinsPerClick);
         };
     
+        const handleTap = () => {
+            tap.current += 1;
+        };
+
+        const handleCollect = () => {
+            collect.current += coinsPerClick;
+        }
+
+        const handleTapEvent = () => {
+            handleTap();
+            handleCollect();
+            handleCoin();
+        };
+
         const handleTasksUI = () => {
             resetStates();
-            setShowTasks(!false);
+            setShowTasks(true);
         };
     
         const handleBoostsUI = () => {
             resetStates();
-            setBuyBoosts(!false);
+            setBuyBoosts(true);
         };
 
         const handleEarnUI = () => {
             resetStates();
-            setEarnCoins(!false);
+            setEarnCoins(true);
         };
 
         const handleProfileUI = () => {
             resetStates();
-            setShowProfile(!false);
+            setShowProfile(true);
         };
 
         const handleDonateUI = () => {
             resetStates();
-            setShowDonate(!false);
+            setShowDonate(true);
         }
 
         const formatAmount = (amount) => {
@@ -66,7 +82,9 @@ const App = () => {
             return(
                 <Tasks 
                 amount={formatAmount(amount)} 
-                setAmount={setAmount} 
+                setAmount={setAmount}
+                tap={tap}
+                collect={collect} 
                 handleBoostsUI={handleBoostsUI} 
                 handleEarnUI={handleEarnUI} 
                 handleProfileUI={handleProfileUI} 
@@ -103,7 +121,7 @@ const App = () => {
             return(
                 <Earn 
                 amount={formatAmount(amount)} 
-                handleCoinClick={handleCoinClick} 
+                handleTapEvent={handleTapEvent}
                 handleTasksUI={handleTasksUI} 
                 handleBoostsUI={handleBoostsUI} 
                 handleProfileUI={handleProfileUI} 
@@ -117,4 +135,4 @@ const App = () => {
     );
 };
 
-export default App
+export default App;

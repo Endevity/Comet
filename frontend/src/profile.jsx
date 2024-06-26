@@ -34,6 +34,10 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
         trackMouse: true,
     });
 
+    const earnAchievement = () => {
+
+    };
+
     return(
         <div className="mobile">
             <div className="amount-display">

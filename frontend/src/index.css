@@ -411,6 +411,7 @@ span {
   height: 87.5px;
   border-radius: 100px;
   margin-top: 10px;
+  opacity: 0.45;
 }
 
 .achievement-item p {

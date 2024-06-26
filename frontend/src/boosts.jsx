@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+
+export let coinsPerClick = 1;
+
 const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
     return(
         <div className="mobile">

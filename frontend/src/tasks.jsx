@@ -1,103 +1,150 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Tasks = ({ amount, setAmount, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
-    const [doneTaskOne, setDoneTaskOne] = useState(false);
-    const [claimedTaskOne, setClaimedTaskOne] = useState(false);
-    const [doneTaskTwo, setDoneTaskTwo] = useState(false);
-    const [claimedTaskTwo, setClaimedTaskTwo] = useState(false);
-    const [doneTaskThree, setDoneTaskThree] = useState(false);
-    const [claimedTaskThree, setClaimedTaskThree] = useState(false);
-    const [doneTaskFour, setDoneTaskFour] = useState(false);
-    const [claimedTaskFour, setClaimedTaskFour] = useState(false);
-    const [doneTaskFive, setDoneTaskFive] = useState(false);
-    const [claimedTaskFive, setClaimedTaskFive] = useState(false);
-    const [doneTaskSix, setDoneTaskSix] = useState(false);
-    const [claimedTaskSix, setClaimedTaskSix] = useState(false);
+const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
+    const [claimOne, setClaimOne] = useState(false);
+    const [claimTwo, setClaimTwo] = useState(false);
+    const [claimThree, setClaimThree] = useState(false);
+    const [claimFour, setClaimFour] = useState(false);
+    const [claimFive, setClaimFive] = useState(false);
+    const [claimSix, setClaimSix] = useState(false);
 
     const handleClaimTask = (e) => {
-        e.target.style.backgroundImage = `linear-gradient(var(--color3), var(--color4))`;
-        e.target.style.color = "var(--color1)";
-        e.target.style.borderRadius = "50px";
-        e.target.textContent = "Claim";
-    };
-
-    const handleDoneTask = (e) => {
         e.target.style.backgroundImage = `linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9))`;
         e.target.style.color = "var(--color1)";
-        e.target.style.borderRadius = "50px";
+        e.target.borderRadius = "50px";
         e.target.textContent = "Done";
     };
+    
+    useEffect(() => {
+        if (collect.current >= 5 && !claimOne) {
+            const taskOneElement = document.querySelector(".task-one");
+
+            taskOneElement.style.backgroundImage = "linear-gradient(var(--color3), var(--color4))";
+            taskOneElement.style.color = "var(--color1)";
+            taskOneElement.style.borderRadius = "50px";
+            taskOneElement.textContent = "Claim";
+
+            setClaimOne(true);
+        };
+    }, []);
 
     const handleTaskOne = (e) => {
-        if (!doneTaskOne) {
-            window.open("https://www.google.com", "_blank");
+        if(claimOne){
             handleClaimTask(e);
-            setDoneTaskOne(true);
-        } else if (!claimedTaskOne) {
             setAmount(a => a + 50000);
-            setClaimedTaskOne(true);
-            handleDoneTask(e);
-        }
+            collect.current += 50000;
+            setClaimOne(false);
+        };
     };
+
+    useEffect(() => {
+        if (collect.current >= 5 && !claimTwo) {
+            const taskTwoElement = document.querySelector(".task-two");
+
+            taskTwoElement.style.backgroundImage = "linear-gradient(var(--color3), var(--color4))";
+            taskTwoElement.style.color = "var(--color1)";
+            taskTwoElement.style.borderRadius = "50px";
+            taskTwoElement.textContent = "Claim";
+
+            setClaimTwo(true);
+        };
+    }, []);
 
     const handleTaskTwo = (e) => {
-        if (!doneTaskTwo) {
-            window.open("https://www.google.com", "_blank");
+        if(claimTwo){
             handleClaimTask(e);
-            setDoneTaskTwo(true);
-        } else if (!claimedTaskTwo) {
             setAmount(a => a + 40000);
-            setClaimedTaskTwo(true);
-            handleDoneTask(e);
-        }
+            collect.current += 40000;
+            setClaimTwo(false);
+        };
     };
+
+    useEffect(() => {
+        if (collect.current >= 5 && !claimThree) {
+            const taskThreeElement = document.querySelector(".task-three");
+
+            taskThreeElement.style.backgroundImage = "linear-gradient(var(--color3), var(--color4))";
+            taskThreeElement.style.color = "var(--color1)";
+            taskThreeElement.style.borderRadius = "50px";
+            taskThreeElement.textContent = "Claim";
+
+            setClaimThree(true);
+        };
+    }, []);
 
     const handleTaskThree = (e) => {
-        if (!doneTaskThree) {
-            window.open("https://www.google.com", "_blank");
+        if(claimThree){
             handleClaimTask(e);
-            setDoneTaskThree(true);
-        } else if (!claimedTaskThree) {
             setAmount(a => a + 125000);
-            setClaimedTaskThree(true);
-            handleDoneTask(e);
-        }
+            collect.current += 125000;
+            setClaimThree(false);
+        };
     };
+
+    useEffect(() => {
+        if (collect.current >= 5 && !claimFour) {
+            const taskFourElement = document.querySelector(".task-four");
+
+            taskFourElement.style.backgroundImage = "linear-gradient(var(--color3), var(--color4))";
+            taskFourElement.style.color = "var(--color1)";
+            taskFourElement.style.borderRadius = "50px";
+            taskFourElement.textContent = "Claim";
+
+            setClaimFour(true);
+        };
+    }, []);
 
     const handleTaskFour = (e) => {
-        if (!doneTaskFour) {
-            window.open("https://www.google.com", "_blank");
+        if(claimFour){
             handleClaimTask(e);
-            setDoneTaskFour(true);
-        } else if (!claimedTaskFour) {
             setAmount(a => a + 800000);
-            setClaimedTaskFour(true);
-            handleDoneTask(e);
-        }
+            collect.current += 800000;
+            setClaimFour(false);
+        };
     };
+
+    useEffect(() => {
+        if (collect.current >= 500000 && !claimFive) {
+            const taskFiveElement = document.querySelector(".task-five");
+
+            taskFiveElement.style.backgroundImage = "linear-gradient(var(--color3), var(--color4))";
+            taskFiveElement.style.color = "var(--color1)";
+            taskFiveElement.style.borderRadius = "50px";
+            taskFiveElement.textContent = "Claim";
+
+            setClaimFive(true);
+        };
+    }, []);
 
     const handleTaskFive = (e) => {
-        if (!doneTaskFive) {
-            window.open("https://www.google.com", "_blank");
+        if(claimFive){
             handleClaimTask(e);
-            setDoneTaskFive(true);
-        } else if (!claimedTaskFive) {
             setAmount(a => a + 300000);
-            setClaimedTaskFive(true);
-            handleDoneTask(e);
-        }
+            collect.current += 300000;
+            setClaimFive(false);
+        };
     };
 
+    useEffect(() => {
+        if (tap.current >= 1000 && !claimSix) {
+            const taskSixElement = document.querySelector(".task-six");
+
+            taskSixElement.style.backgroundImage = "linear-gradient(var(--color3), var(--color4))";
+            taskSixElement.style.color = "var(--color1)";
+            taskSixElement.style.borderRadius = "50px";
+            taskSixElement.textContent = "Claim";
+
+            setClaimSix(true);
+        };
+    }, []);
+
     const handleTaskSix = (e) => {
-        if (!doneTaskSix) {
-            window.open("https://www.google.com", "_blank");
+        if(claimSix){
             handleClaimTask(e);
-            setDoneTaskSix(true);
-        } else if (!claimedTaskSix) {
-            setAmount(a => a + 55000);
-            setClaimedTaskSix(true);
-            handleDoneTask(e);
-        }
+            setAmount(a => a + 750000);
+            collect.current += 750000;
+            setClaimSix(false);
+        };
     };
 
     return (
@@ -113,55 +160,55 @@ const Tasks = ({ amount, setAmount, handleBoostsUI, handleEarnUI, handleProfileU
                     <div className="task">
                         <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Join telegram</p>
-                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token"/>
                         <p className="task-reward">50000</p>
                         <div className="task-button">
-                            <div onClick={handleTaskOne}>Go</div>
+                            <div className="task-one" onClick={(e) => handleTaskOne(e)}>Go</div>
                         </div>
                     </div>
                     <div className="task">
                         <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Follow X</p>
-                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token"/>
                         <p className="task-reward">40000</p>
                         <div className="task-button">
-                            <div onClick={handleTaskTwo}>Go</div>
+                            <div className="task-two" onClick={(e) => handleTaskTwo(e)}>Go</div>
                         </div>
                     </div>
                     <div className="task">
                         <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Connect Wallet</p>
-                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token"/>
                         <p className="task-reward">125000</p>
                         <div className="task-button">
-                            <div onClick={handleTaskThree}>Go</div>
+                            <div className="task-three" onClick={(e) => handleTaskThree(e)}>Go</div>
                         </div>
                     </div>
                     <div className="task">
                         <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Play for 24 hours</p>
-                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token"/>
                         <p className="task-reward">800000</p>
                         <div className="task-button">
-                            <div onClick={handleTaskFour}>Go</div>
+                            <div className="task-four" onClick={(e) => handleTaskFour(e)}>Go</div>
                         </div>
                     </div>
                     <div className="task">
                         <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Collect 500000 Coins</p>
-                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token"/>
                         <p className="task-reward">300000</p>
                         <div className="task-button">
-                            <div onClick={handleTaskFive}>Go</div>
+                            <div className="task-five" onClick={(e) => handleTaskFive(e)}>Go</div>
                         </div>
                     </div>
                     <div className="task">
                         <img src="../src/assets/images/Task.svg" alt="Task" className="task-image" />
                         <p className="task-p">Tap 1000 times</p>
-                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token" />
-                        <p className="task-reward">55000</p>
+                        <img src="../src/assets/images/Token-Small.png" alt="Token" className="task-token"/>
+                        <p className="task-reward">750000</p>
                         <div className="task-button">
-                            <div onClick={handleTaskSix}>Go</div>
+                            <div className="task-six" onClick={(e) => handleTaskSix(e)}>Go</div>
                         </div>
                     </div>
                 </div>
