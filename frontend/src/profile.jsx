@@ -54,7 +54,7 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
                             <p>Username:<span> @RaiRaijin</span></p>
                             <p>Playtime: 00D 00H 00M</p>
                             <p>Alpha Tester: No / Yes</p>
-                            <p>Donator: No / Yes</p>
+                            <p>Donator:<span className="beta"> Coming in Beta</span></p>
                         </div>
                     </div>
                     <hr />

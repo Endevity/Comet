@@ -9,24 +9,9 @@ const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handlePro
                     <p className="donate-headline">Donate</p>
                     <hr />
                     <div className="donate-container">
-                        <div className="donate">
-                            
-                        </div>
-                        <div className="donate">
-    
-                        </div>
-                        <div className="donate">
-    
-                        </div>
-                        <div className="donate">
-    
-                        </div>
-                        <div className="donate">
-    
-                        </div>
-                        <div className="donate">
-    
-                        </div>
+                        <p>Coming in Beta</p>
+                        <p>Donating will give 3X boost to tap</p>
+                        <p>90% of all donations will go directly to liquidity and 10% will go to development team</p>
                     </div>   
                 </div>
                 <div className="buttons-grid">
