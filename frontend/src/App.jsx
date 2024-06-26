@@ -16,8 +16,8 @@ const App = () => {
         const [showProfile, setShowProfile] = useState(false);
         const [showDonate, setShowDonate] = useState(false);
         
-        let tap = useRef(0);
-        let collect = useRef(0);
+        const tap = useRef(0);
+        const collect = useRef(0);
         
         const resetStates = () => {
             setShowTasks(false);
