@@ -5,6 +5,9 @@
   font-weight: bold;
 }
 
+/*Animations*/
+
+
 /* Universal */
 :root {
   --color1: #FFFFFF;
@@ -197,6 +200,7 @@ body {
   text-transform: uppercase;
 }
 
+/*Tasks*/
 .tasks-div {
   width: 400px;
   height: 450px;
@@ -290,6 +294,7 @@ body {
   text-shadow: var(--smallshadow);
 }
 
+/*Boosts*/
 .boosts-div {
   width: 400px;
   height: 450px;
@@ -328,6 +333,7 @@ body {
   padding-top: 15px;
 }
 
+/*Profile*/
 .profile-div {
   width: 400px;
   height: 450px;
@@ -433,6 +439,7 @@ span {
   margin-bottom: 6px;
 }
 
+/*Donate*/
 .donate-div {
   width: 400px;
   height: 450px;
@@ -474,4 +481,23 @@ span {
 .donate-container p:nth-of-type(1) {
   color: crimson;
   margin-bottom: 20px;
+}
+
+/*Media Queries*/
+@media (height: 600px) {
+  .earn {
+    width: 45%;
+  }
+}
+
+@media (min-height: 730px) {
+  .earn {
+    width: 80%;
+  }
+}
+
+@media (min-height: 850px) {
+  .earn {
+    width: 90%;
+  }
 }
