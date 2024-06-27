@@ -37,6 +37,7 @@
 body {
   min-width: 320px;
   max-width: 480px;
+  min-height: 630px;
   margin: 0 auto;
   font-family: BDO, Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -104,19 +105,21 @@ body {
 .mobile {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   height: 100svh;
+  padding: 0;
+  margin: 0;
 }
 
 .amount-display {
   display: flex;
   width: 90%;
   height: auto;
-  margin-top: -10%;
+  margin: 5% 0;
   border: 3px solid transparent;
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, 
+  background: conic-gradient(var(--color6), var(--color6)) padding-box,
               conic-gradient(from -140deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
   border-radius: 29.63px;
   box-shadow: var(--bigshadow);
@@ -141,21 +144,20 @@ body {
 }
 
 .earn {
-  width: 65%;
+  width: 70%;
   height: auto;
   border-radius: 100%;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin: auto 0;
 }
 
 .buttons-grid {
   display: grid;
   width: 90%;
   height: 10%;
-  grid-template-columns: repeat(5, 18%);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   gap: 2.5%;
-  margin-bottom: 5%;
+  margin: 5% 0;
 }
 
 .button {
@@ -181,38 +183,39 @@ body {
   text-align: center;
 }
 
-
 .active {
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+  background: conic-gradient(var(--color6), var(--color6)) padding-box, 
+              conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
 }
 
 .inactive {
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+  background: conic-gradient(var(--color6), var(--color6)) padding-box, 
+              conic-gradient(from 225deg, var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
 }
 
 .version {
-  position: absolute;
-  bottom: 3%;
   width: 90%;
   height: 30px;
+  margin-top: 5%;
+  margin-bottom: 3%;
   font-size: 25px;
   text-shadow: var(--bigshadow);
   text-transform: uppercase;
 }
 
-/*Tasks*/
+/* Tasks */
 .tasks-div {
-  width: 400px;
-  height: 450px;
+  width: 90%;
+  height: auto;
   text-transform: uppercase;
   color: var(--color2);
   background-color: var(--color6);
-  margin-top: 110px;
-  margin-bottom: 110px;
   border: 4px solid transparent;
   border-radius: 38.1px;
+  margin: auto 0;
   box-shadow: var(--bigshadow);
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+  background: conic-gradient(var(--color6), var(--color6)) padding-box, 
+              conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
 }
 
 .tasks-headline {
@@ -220,41 +223,40 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 337.78px;
-  height: 45px;
+  width: 90%;
+  height: 10%;
   font-size: 18px;
 }
 
 .tasks-div hr {
-  width: 337.78px;
+  width: 90%;
   margin: auto;
   border: 2px solid transparent;
-  background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
+  background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box,
+              linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
 }
 
 .task-container {
-  padding-left: 33.33px;
-  padding-right: 33.33px;
-  padding-bottom: 50px;
-  padding-top: 15px;
+  width: 90%;
+  height: auto;
+  margin: 5% auto;
 }
 
 .task {
-  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5%;
 }
 
 .task img {
   float: left;
-}
-
-.task-image {
-  width: 40px;
-  height: 45px;
+  width: 10%;
+  height: auto;
 }
 
 .task-token {
-  width: 21.29px;
-  height: 21.29px;
+  width: 5%;
+  height: auto;
 }
 
 .task p {
@@ -262,9 +264,9 @@ body {
 }
 
 .task-p {
-  width: 200px;
-  height: 22.5px;
-  font-size: 12px;
+  width: 65%;
+  height: auto;
+  font-size: 11px;
   text-align: left;
 }
 
@@ -272,25 +274,24 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 44.44px;
+  width: 65%;
   height: 22.5px;
   font-size: 11px;
 }
 
 .task-button {
   float: right;
-  width: 82.22px;
-  height: 45px;
+  width: 25%;
+  height: auto;
   background-color: var(--color1);
   border-radius: 50px;
-  transform: translateY(-100%);
 }
 
 .task-button div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
+  height: 100%;
   text-shadow: var(--smallshadow);
 }
 
