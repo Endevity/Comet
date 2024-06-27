@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
   font-family: "BDO";
-  src: url(../src/assets/fonts/BDOGrotesk-DemiBold.woff) format("woff");
+  src: url(/assets/fonts/BDOGrotesk-DemiBold.woff) format("woff");
   font-weight: bold;
 }
 

@@ -10,7 +10,7 @@ const PC = () => {
         <div className="pc">
             <h1>The game is available only on mobile devices!</h1>
             <QR />
-            <p className="telegram"><img src="../src/assets/images/Telegram.svg" alt="Telegram"/>@CloverLeafCoinbot</p>
+            <p className="telegram"><img src="/assets/images/Telegram.svg" alt="Telegram"/>@CloverLeafCoinbot</p>
             <p className="version">Currently in Alpha</p>
         </div>
     );

@@ -41,7 +41,7 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
     return(
         <div className="mobile">
             <div className="amount-display">
-                <img src="../src/assets/images/Token-Small.png" alt="Token" className="small-token" />
+                <img src="/assets/images/Token-Small.png" alt="Token" className="small-token" />
                 <div className="amount-text">{amount}</div>
             </div>
             <div className="profile-div">
@@ -49,7 +49,7 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
                 <hr />
                 <div className="profile-container">
                     <div className="profile-info">
-                        <img src="../src/assets/images/Avatar.jpg" alt="Avatar" />
+                        <img src="/assets/images/Avatar.jpg" alt="Avatar" />
                         <div className="profile-info-grid">
                             <p>Username:<span> @RaiRaijin</span></p>
                             <p>Playtime: 00D 00H 00M</p>
@@ -74,23 +74,23 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
             </div>
             <div className="buttons-grid">
                 <div className="button inactive">
-                    <img src="../src/assets/images/Boost.svg" alt="Boost" onClick={handleBoostsUI}/>
+                    <img src="/assets/images/Boost.svg" alt="Boost" onClick={handleBoostsUI}/>
                     <p>Boosts</p>
                 </div>
                 <div className="button inactive" onClick={handleTasksUI}>
-                    <img src="../src/assets/images/Tasks.svg" alt="Tasks" />
+                    <img src="/assets/images/Tasks.svg" alt="Tasks" />
                     <p>Tasks</p>
                 </div>
                 <div className="button inactive">
-                    <img src="../src/assets/images/Token-Small.png" alt="Tap" onClick={handleEarnUI}/>
+                    <img src="/assets/images/Token-Small.png" alt="Tap" onClick={handleEarnUI}/>
                     <p>Earn</p>
                 </div>
                 <div className="button active">
-                    <img src="../src/assets/images/Profile.svg" alt="Profile"/>
+                    <img src="/assets/images/Profile.svg" alt="Profile"/>
                     <p>Profile</p>
                 </div>
                 <div className="button inactive">
-                    <img src="../src/assets/images/Donate.svg" alt="Donate" onClick={handleDonateUI}/>
+                    <img src="/assets/images/Donate.svg" alt="Donate" onClick={handleDonateUI}/>
                     <p>Donate</p>
                 </div>
             </div>
