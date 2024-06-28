@@ -81,52 +81,57 @@ const App = () => {
         if(showTasks){
             return(
                 <Tasks 
-                amount={formatAmount(amount)} 
-                setAmount={setAmount}
-                tap={tap}
-                collect={collect} 
-                handleBoostsUI={handleBoostsUI} 
-                handleEarnUI={handleEarnUI} 
-                handleProfileUI={handleProfileUI} 
-                handleDonateUI={handleDonateUI}/>
+                    amount={formatAmount(amount)} 
+                    setAmount={setAmount}
+                    tap={tap}
+                    collect={collect} 
+                    handleBoostsUI={handleBoostsUI}
+                    handleTasksUI={handleTasksUI} 
+                    handleEarnUI={handleEarnUI} 
+                    handleProfileUI={handleProfileUI} 
+                    handleDonateUI={handleDonateUI}/>
             );
         } else if(buyBoosts){
             return(
                 <Boosts 
-                amount={formatAmount(amount)} 
-                handleTasksUI={handleTasksUI} 
-                handleEarnUI={handleEarnUI} 
-                handleProfileUI={handleProfileUI} 
-                handleDonateUI={handleDonateUI}/>
+                    amount={formatAmount(amount)}
+                    handleBoostsUI={handleBoostsUI} 
+                    handleTasksUI={handleTasksUI} 
+                    handleEarnUI={handleEarnUI} 
+                    handleProfileUI={handleProfileUI} 
+                    handleDonateUI={handleDonateUI}/>
             );
         } else if(showProfile){
             return(
                 <Profile 
-                amount={formatAmount(amount)} 
-                handleBoostsUI={handleBoostsUI} 
-                handleTasksUI={handleTasksUI} 
-                handleEarnUI={handleEarnUI} 
-                handleDonateUI={handleDonateUI}/>
+                    amount={formatAmount(amount)} 
+                    handleBoostsUI={handleBoostsUI} 
+                    handleTasksUI={handleTasksUI} 
+                    handleEarnUI={handleEarnUI}
+                    handleProfileUI={handleProfileUI} 
+                    handleDonateUI={handleDonateUI}/>
             );
         } else if(showDonate){
             return(
                 <Donate 
-                amount={formatAmount(amount)} 
-                handleBoostsUI={handleBoostsUI} 
-                handleTasksUI={handleTasksUI} 
-                handleEarnUI={handleEarnUI}
-                handleProfileUI={handleProfileUI}/>
+                    amount={formatAmount(amount)} 
+                    handleBoostsUI={handleBoostsUI} 
+                    handleTasksUI={handleTasksUI} 
+                    handleEarnUI={handleEarnUI}
+                    handleProfileUI={handleProfileUI}
+                    handlleDonateUI={handleDonateUI}
+                    />
             );
         } else {
             return(
                 <Earn 
-                amount={formatAmount(amount)} 
-                handleTapEvent={handleTapEvent}
-                handleTasksUI={handleTasksUI} 
-                handleBoostsUI={handleBoostsUI} 
-                handleProfileUI={handleProfileUI} 
-                handleDonateUI={handleDonateUI}/>
-            );
+                    amount={formatAmount(amount)} 
+                    handleTapEvent={handleTapEvent}
+                    handleTasksUI={handleTasksUI} 
+                    handleBoostsUI={handleBoostsUI} 
+                    handleProfileUI={handleProfileUI} 
+                    handleDonateUI={handleDonateUI}/>
+                );
         };
     };
 

@@ -2,7 +2,10 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { BsThreeDots } from "react-icons/bs";
 import { TonConnectButton } from "@tonconnect/ui-react";
-        
+import Amount from "./amount";
+import Button from "./button";
+import Version from "./version";
+
 const achievementSets = [
     [
       { text: 'Log in 7 days in a row', imgSrc: 'https://placehold.co/400' },
@@ -16,7 +19,7 @@ const achievementSets = [
     ],
   ];
 
-const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDonateUI }) => {
+const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
     const [currentSet, setCurrentSet] = useState(0);
 
     const handleSwipeLeft = () => {
@@ -40,10 +43,9 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
 
     return(
         <div className="mobile">
-            <div className="amount-display">
-                <img src="/assets/images/Token-Small.png" alt="Token" className="small-token" />
-                <div className="amount-text">{amount}</div>
-            </div>
+            <Amount 
+                amount={amount}
+            />
             <div className="profile-div">
                 <p className="profile-headline">Profile</p>
                 <hr />
@@ -73,28 +75,42 @@ const Profile = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleDo
                 </div>   
             </div>
             <div className="buttons-grid">
-                <div className="button inactive">
-                    <img src="/assets/images/Boost.svg" alt="Boost" onClick={handleBoostsUI}/>
-                    <p>Boosts</p>
-                </div>
-                <div className="button inactive" onClick={handleTasksUI}>
-                    <img src="/assets/images/Tasks.svg" alt="Tasks" />
-                    <p>Tasks</p>
-                </div>
-                <div className="button inactive">
-                    <img src="/assets/images/Token-Small.png" alt="Tap" onClick={handleEarnUI}/>
-                    <p>Earn</p>
-                </div>
-                <div className="button active">
-                    <img src="/assets/images/Profile.svg" alt="Profile"/>
-                    <p>Profile</p>
-                </div>
-                <div className="button inactive">
-                    <img src="/assets/images/Donate.svg" alt="Donate" onClick={handleDonateUI}/>
-                    <p>Donate</p>
-                </div>
+            <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Boost.svg"
+                    alt="Boost"
+                    handleChange={handleBoostsUI}
+                    name="Boosts"
+                />
+                <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Tasks.svg"
+                    alt="Tasks"
+                    handleChange={handleProfileUI}
+                    name="Tasks"
+                />
+                <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Token-Small.png"
+                    alt="Tap"
+                    handleChange={handleEarnUI}
+                    name="Earn"
+                />
+                <Button 
+                    buttonClass="button active"
+                    imgSrc="/assets/images/Profile.svg"
+                    alt="Profile"
+                    name="Profile"
+                />
+                <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Donate.svg"
+                    alt="Donate"
+                    handleChange={handleDonateUI}
+                    name="Donate"
+                />
             </div>
-            <p className="version">Currently in Alpha</p>
+            <Version />
         </div>
     );
 };

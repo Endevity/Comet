@@ -1,34 +1,51 @@
+import Amount from "./amount"
+import Button from "./button"
+import Version from "./version";
+
 const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handleProfileUI, handleDonateUI }) => {  
     return (
         <div className="mobile">
-            <div className="amount-display">
-                <img src="/assets/images/Token-Small.png" alt="Token" className="small-token" />
-                <div className="amount-text">{amount}</div>
-            </div>
+            <Amount 
+                amount={amount}
+            />
             <img src="/assets/images/Token-Big.png" alt="Coin" className="earn" onClick={handleTapEvent} />
             <div className="buttons-grid">
-                <div className="button inactive">
-                    <img src="/assets/images/Boost.svg" alt="Boost" onClick={handleBoostsUI}/>
-                    <p>Boosts</p>
-                </div>
-                <div className="button inactive" onClick={handleTasksUI}>
-                    <img src="/assets/images/Tasks.svg" alt="Tasks" />
-                    <p>Tasks</p>
-                </div>
-                <div className="button active">
-                    <img src="/assets/images/Token-Small.png" alt="Tap" />
-                    <p>Earn</p>
-                </div>
-                <div className="button inactive">
-                    <img src="/assets/images/Profile.svg" alt="Profile" onClick={handleProfileUI}/>
-                    <p>Profile</p>
-                </div>
-                <div className="button inactive">
-                    <img src="/assets/images/Donate.svg" alt="Donate" onClick={handleDonateUI}/>
-                    <p>Donate</p>
-                </div>
+            <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Boost.svg"
+                    alt="Boost"
+                    handleChange={handleBoostsUI}
+                    name="Boosts"
+                />
+                <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Tasks.svg"
+                    alt="Tasks"
+                    handleChange={handleTasksUI}
+                    name="Tasks"
+                />
+                <Button 
+                    buttonClass="button active"
+                    imgSrc="/assets/images/Token-Small.png"
+                    alt="Tap"
+                    name="Earn"
+                />
+                <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Profile.svg"
+                    alt="Profile"
+                    handleChange={handleProfileUI}
+                    name="Profile"
+                />
+                <Button 
+                    buttonClass="button inactive"
+                    imgSrc="/assets/images/Donate.svg"
+                    alt="Donate"
+                    handleChange={handleDonateUI}
+                    name="Donate"
+                />
             </div>
-            <p className="version">Currently in Alpha</p>
+            <Version />
         </div>
     );
 };
