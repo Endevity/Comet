@@ -18,7 +18,7 @@ const achievementSets = [
     ],
   ];
 
-const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
+const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDonateUI }) => {
     const [currentSet, setCurrentSet] = useState(0);
 
     const handleSwipeLeft = () => {
@@ -70,7 +70,9 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleProfileUI, handle
                         </div>
                     </div>
                     <BsThreeDots className="dots"/>
-                    <TonConnectButton className="connect" style={{ margin: "0 auto" }}/>
+                    <div className="connect-container">
+                        <TonConnectButton />
+                    </div>
                 </div>   
             </div>
             <div className="buttons-grid">
@@ -85,7 +87,7 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleProfileUI, handle
                     buttonClass="button inactive"
                     imgSrc="/assets/images/Tasks.svg"
                     alt="Tasks"
-                    handleChange={handleProfileUI}
+                    handleChange={handleTasksUI}
                     name="Tasks"
                 />
                 <Button 

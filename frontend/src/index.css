@@ -35,9 +35,8 @@
 }
 
 body {
-  min-width: 375px;
+  min-width: 320px;
   max-width: 480px;
-  min-height: 630px;
   margin: 0 auto;
   font-family: BDO, Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -146,7 +145,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   gap: 2.5%;
-  margin: 5% 0;
+  margin: 5% auto;
 }
 
 .button {
@@ -292,7 +291,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   width: 100%;
   height: 10%;
   font-size: 18px;
@@ -323,13 +321,13 @@ body {
   border-radius: 38.1px;
   box-shadow: var(--bigshadow);
   background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+  margin: auto;
 }
 
 .profile-headline {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   width: 100%;
   height: 10%;
   font-size: 18px;
@@ -349,10 +347,10 @@ body {
 
 .profile-container hr {
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .profile-info {
-  margin: 2.5% auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -380,24 +378,22 @@ span {
   grid-template-rows: repeat(4, 31.25px);
   align-items: center;
   text-align: left;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .achievement-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .achievement-grid {
   display: grid;
-  grid-template-columns: repeat(3, 87.5px);
-  justify-content: center;
-  width: 341.77px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 21px;
   font-size: 10px;
-  margin-top: 10px;
-  margin-bottom: 6px;
+  width: 100%;
 }
 
 .achievement-item {
@@ -416,13 +412,20 @@ span {
 
 .achievement-item p {
   width: 77.78px;
+  text-align: center;
 }
 
 .dots {
-  width: 33.33px;
-  height: 37.5px;
+  font-size: 24px;
   opacity: 0.25;
-  margin-bottom: 6px;
+}
+
+.connect-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 /*Donate*/
