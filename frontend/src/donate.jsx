@@ -1,6 +1,5 @@
 import Amount from "./amount";
 import Button from "./button";
-import Version from "./version";
 
 const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfileUI}) => {
     return(
@@ -53,7 +52,6 @@ const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handlePro
                     name="Donate"
                 />
                 </div>
-                <Version />
             </div>
         );
     };

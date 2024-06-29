@@ -8,7 +8,7 @@ import Donate from "./donate.jsx";
 import PC from "./pc.jsx";
 
 const App = () => {
-    if(isMobile){
+    if(!isMobile){
         const [amount, setAmount] = useState(0);
         const [showTasks, setShowTasks] = useState(false);
         const [buyBoosts, setBuyBoosts] = useState(false);

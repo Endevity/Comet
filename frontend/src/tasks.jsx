@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import Amount from "./amount";
 import Button from "./button";
 import Task from "./task";
-import Version from "./version";
 
 const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
 
@@ -91,7 +90,6 @@ const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, 
                     name="Donate"
                 />
             </div>
-            <Version />
         </div>
     );
 };

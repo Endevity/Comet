@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import QR from "./qr.jsx";
-import Version from "./version.jsx";
 
 const PC = () => {
    useEffect(() => {
@@ -12,7 +11,6 @@ const PC = () => {
             <h1>The game is available only on mobile devices!</h1>
             <QR />
             <p className="telegram"><img src="/assets/images/Telegram.svg" alt="Telegram"/>@CloverLeafCoinbot</p>
-            <Version />
         </div>
     );
 };

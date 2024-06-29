@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Amount from "./amount";
 import Button from "./button";
-import Version from "./version";
 
 export let coinsPerClick = 1;
 
@@ -71,7 +70,6 @@ const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDo
                     name="Donate"
                 />
             </div>
-            <Version />
         </div>
     );
 };

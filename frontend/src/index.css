@@ -35,7 +35,7 @@
 }
 
 body {
-  min-width: 320px;
+  min-width: 375px;
   max-width: 480px;
   min-height: 630px;
   margin: 0 auto;
@@ -92,15 +92,6 @@ body {
   margin-right: 5px;
 }
 
-.version-qr {
-  width: 300px;
-  height: 30px;
-  font-size: 25px;
-  text-shadow: 0 5px 2px var(--color5);
-  text-transform: uppercase;
-  padding-bottom: 50px;
-}
-
 /* Mobile Platform */
 .mobile {
   display: flex;
@@ -108,7 +99,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 100svh;
+  height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -144,10 +135,8 @@ body {
 }
 
 .earn {
-  width: 70%;
+  width: 80%;
   height: auto;
-  border-radius: 100%;
-  margin: auto 0;
 }
 
 .buttons-grid {
@@ -193,16 +182,6 @@ body {
               conic-gradient(from 225deg, var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
 }
 
-.version {
-  width: 90%;
-  height: 30px;
-  margin-top: 2%;
-  margin-bottom: 3%;
-  font-size: 25px;
-  text-shadow: var(--bigshadow);
-  text-transform: uppercase;
-}
-
 /* Tasks */
 .tasks-div {
   width: 90%;
@@ -215,7 +194,6 @@ body {
   box-shadow: var(--bigshadow);
   background: conic-gradient(var(--color6), var(--color6)) padding-box,
               conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
-  overflow: hidden;
 }
 
 .tasks-headline {
@@ -251,7 +229,7 @@ body {
 
 .task img {
   float: left;
-  width: 15%;
+  width: 12.5%;
   height: auto;
 }
 
@@ -272,7 +250,7 @@ body {
   display: flex;
   align-items: center;
   width: 60%;
-  margin-top: 3.5%;
+  margin-top: 3.75%;
   height: auto;
   font-size: 11px;
 }
@@ -298,12 +276,12 @@ body {
 /*Boosts*/
 .boosts-div {
   width: 90%;
-  height: 450px;
+  height: auto;
   text-transform: uppercase;
   color: var(--color2);
   background-color: var(--color6);
-  margin-top: 110px;
-  margin-bottom: 110px;
+  margin-top: auto;
+  margin-bottom: auto;
   border: 4px solid transparent;
   border-radius: 38.1px;
   box-shadow: var(--bigshadow);
@@ -315,8 +293,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 337.78px;
-  height: 45px;
+  width: 100%;
+  height: 10%;
   font-size: 18px;
 }
 
@@ -336,13 +314,11 @@ body {
 
 /*Profile*/
 .profile-div {
-  width: 400px;
-  height: 450px;
+  width: 90%;
+  height: auto;
   text-transform: uppercase;
   color: var(--color2);
   background-color: var(--color6);
-  margin-top: 110px;
-  margin-bottom: 110px;
   border: 4px solid transparent;
   border-radius: 38.1px;
   box-shadow: var(--bigshadow);
@@ -354,31 +330,39 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 337.78px;
-  height: 45px;
+  width: 100%;
+  height: 10%;
   font-size: 18px;
 }
 
 .profile-div hr {
-  width: 337.78px;
+  width: 90%;
   margin: auto;
   border: 2px solid transparent;
   background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
 }
 
 .profile-container {
-  padding-left: 33.33px;
-  padding-right: 33.33px;
-  padding-bottom: 50px;
-  padding-top: 15px;
+  width: 90%;
+  margin: auto;
+}
+
+.profile-container hr {
+  width: 100%;
+}
+
+.profile-info {
+  margin: 2.5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .profile-info img {
-  float: right;
-  width: 125px;
-  height: 125px;
-  border-radius: 100px;
-  margin-bottom: 15px;
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 span {
@@ -391,7 +375,8 @@ span {
 
 .profile-info-grid {
   display: grid;
-  grid-template-columns: 195.56px;
+  width: 60%;
+  grid-template-columns: auto;
   grid-template-rows: repeat(4, 31.25px);
   align-items: center;
   text-align: left;

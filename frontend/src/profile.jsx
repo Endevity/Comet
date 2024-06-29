@@ -4,7 +4,6 @@ import { BsThreeDots } from "react-icons/bs";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import Amount from "./amount";
 import Button from "./button";
-import Version from "./version";
 
 const achievementSets = [
     [
@@ -51,13 +50,13 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleProfileUI, handle
                 <hr />
                 <div className="profile-container">
                     <div className="profile-info">
-                        <img src="/assets/images/Avatar.jpg" alt="Avatar" />
                         <div className="profile-info-grid">
                             <p>Username:<span> @RaiRaijin</span></p>
                             <p>Playtime: 00D 00H 00M</p>
                             <p>Alpha Tester: No / Yes</p>
                             <p>Donator:<span className="beta"> Coming in Beta</span></p>
                         </div>
+                        <img src="/assets/images/Avatar.jpg" alt="Avatar" />
                     </div>
                     <hr />
                     <div className="achievement-container" {...handlers}>
@@ -110,7 +109,6 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleProfileUI, handle
                     name="Donate"
                 />
             </div>
-            <Version />
         </div>
     );
 };
