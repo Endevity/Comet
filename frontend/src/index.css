@@ -49,45 +49,40 @@ body {
 }
 
 /* PC Platform */
-.pc {
+.pc-div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.pc h1 {
-  display: flex;
-  align-items: center; 
-  height: 200px;
-  font-size: 32px;
+.pc-container h1 {
+  width: 90%;
+  font-size: 24px;
   text-transform: uppercase;
-  text-shadow: 0 5px 2px var(--color5);
-  margin-bottom: 75px;
-  padding-top: 50px;
+  text-shadow: var(--bigshadow);
+  margin: 0 auto 10% auto;
 }
 
-.pc canvas {
-  box-shadow: 0 5px 2px var(--color5);
+.pc-container canvas {
+  box-shadow: var(--bigshadow);
   border-radius: 30px;
+  margin: 10% auto;
 }
 
 .telegram {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 50px;
+  width: 90%;
   font-size: 25px;
-  text-shadow: 0 5px 2px var(--color5);
-  margin-top: 75px;
-  margin-bottom: 138px;
+  text-shadow: var(--bigshadow);
+  margin: 10% auto;
 }
 
-.telegram img {
-  width: 50px;
-  height: 50px;
+.pc img {
+  float: left;
+  width: 15%;
+  height: auto;
   margin-right: 5px;
 }
 
@@ -98,7 +93,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 100svh;
   padding: 0;
   margin: 0;
 }
@@ -473,20 +468,3 @@ span {
 }
 
 /*Media Queries*/
-@media (height: 600px) {
-  .earn {
-    width: 45%;
-  }
-}
-
-@media (min-height: 730px) {
-  .earn {
-    width: 80%;
-  }
-}
-
-@media (min-height: 850px) {
-  .earn {
-    width: 90%;
-  }
-}
