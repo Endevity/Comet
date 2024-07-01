@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { BsThreeDots } from "react-icons/bs";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import Amount from "./amount";
 import Button from "./button";
@@ -68,10 +67,6 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
                             </div>
                             ))}
                         </div>
-                    </div>
-                    <BsThreeDots className="dots"/>
-                    <div className="connect-container">
-                        <TonConnectButton />
                     </div>
                 </div>   
             </div>
