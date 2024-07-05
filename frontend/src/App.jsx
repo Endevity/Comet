@@ -109,7 +109,8 @@ const App = () => {
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
                     handleProfileUI={handleProfileUI} 
-                    handleDonateUI={handleDonateUI}/>
+                    handleDonateUI={handleDonateUI}
+                    />
             );
         } else if(showDonate){
             return(

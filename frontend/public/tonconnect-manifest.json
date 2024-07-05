@@ -1,5 +1,6 @@
 {
-    "url": "https://192.168.0.124:5173",
+    "version": "1.0",
     "name": "App",
-    "iconUrl": "https://192.168.0.124:5173/react.svg"
-}
+    "icon": "https:/localhost:5173/react.svg",
+    "permissions": ["getBalance", "transferTokens"]
+  }

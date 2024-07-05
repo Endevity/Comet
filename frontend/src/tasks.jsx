@@ -18,37 +18,37 @@ const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, 
                 <div className="task-container">
                     <Task 
                         description="Join Telegram"
-                        reward="50000"
+                        reward="50 000"
                         buttonClass="task-one"
                         onButtonClick={(e) => handleTaskOne(e)}
                     />
                     <Task 
                         description="Follow X"
-                        reward="40000"
+                        reward="40 000"
                         buttonClass="task-two"
                         onButtonClick={(e) => handleTaskTwo(e)}
                     />
                     <Task 
                         description="Connect Wallet"
-                        reward="125000"
+                        reward="125 000"
                         buttonClass="task-three"
                         onButtonClick={(e) => handleTaskThree(e)}
                     />
                     <Task 
                         description="Play for 24 hours"
-                        reward="800000"
+                        reward="800 000"
                         buttonClass="task-four"
                         onButtonClick={(e) => handleTaskFour(e)}
                     />
                     <Task 
-                        description="Collect 500000 Coins"
-                        reward="300000"
+                        description="Collect 500 000 Coins"
+                        reward="300 000"
                         buttonClass="task-five"
                         onButtonClick={(e) => handleTaskFive(e)}
                     />
                     <Task 
-                        description="Tap 1000 times"
-                        reward="750000"
+                        description="Tap 1 000 times"
+                        reward="750 000"
                         buttonClass="task-six"
                         onButtonClick={(e) => handleTaskSix(e)}
                     />

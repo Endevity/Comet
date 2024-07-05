@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { TonConnectButton } from "@tonconnect/ui-react";
 import Amount from "./amount";
 import Button from "./button";
 
 const achievementSets = [
     [
       { text: 'Log in 7 days in a row', imgSrc: 'https://placehold.co/400' },
-      { text: 'Tap 1000 times', imgSrc: 'https://placehold.co/400' },
-      { text: 'Collect 500000 coins', imgSrc: 'https://placehold.co/400' },
+      { text: 'Tap 1 000 times', imgSrc: 'https://placehold.co/400' },
+      { text: 'Collect 500 000 coins', imgSrc: 'https://placehold.co/400' },
     ],
     [
       { text: 'Be an Alpha Tester', imgSrc: 'https://placehold.co/400' },
@@ -17,7 +16,7 @@ const achievementSets = [
     ],
   ];
 
-const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDonateUI }) => {
+const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDonateUI, }) => {
     const [currentSet, setCurrentSet] = useState(0);
 
     const handleSwipeLeft = () => {
