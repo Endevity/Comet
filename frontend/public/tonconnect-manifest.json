@@ -1,6 +1,6 @@
 {
-    "version": "1.0",
-    "name": "App",
-    "icon": "https:/localhost:5173/react.svg",
-    "permissions": ["getBalance", "transferTokens"]
-  }
+  "version": "1.0",
+  "name": "App",
+  "icon": "https:/localhost:5173/react.svg",
+  "permissions": ["getBalance", "transferTokens"]
+}
