@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import axios from "axios";
+import { TonConnectButton } from "@tonconnect/ui-react";
 import Amount from "./amount";
 import Button from "./button";
 
@@ -19,39 +19,6 @@ const achievementSets = [
 
 const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDonateUI }) => {
   const [currentSet, setCurrentSet] = useState(0);
-  const [profilePicUrl, setProfilePicUrl] = useState("/assets/images/Avatar.jpg");
-  const [telegramUserId, setTelegramUserId] = useState(null);
-
-  useEffect(() => {
-    const fetchTelegramUserId = async () => {
-      try {
-        const response = await axios.get('/fetchTelegramUserId');
-        if (response.data.userId) {
-          setTelegramUserId(response.data.userId);
-          fetchProfilePhoto(response.data.userId);
-        } else {
-          console.error("No Telegram userId found");
-        }
-      } catch (error) {
-        console.error("Failed to fetch Telegram userId:", error.message);
-      }
-    };
-  
-    fetchTelegramUserId();
-  }, []);
-
-  const fetchProfilePhoto = async (userId) => {
-    try {
-      const response = await axios.get(`/getProfilePhoto?userId=${userId}`);
-      if (response.data.url) {
-        setProfilePicUrl(response.data.url);
-      } else {
-        console.error("No profile photo URL found in response");
-      }
-    } catch (error) {
-      console.error("Failed to fetch profile photo:", error.message);
-    }
-  };
 
   const handleSwipeLeft = () => {
     setCurrentSet((c) => (c + 1) % achievementSets.length);
@@ -68,10 +35,6 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
     trackMouse: true,
   });
 
-  const earnAchievement = () => {
-
-  };
-
   return (
     <div className="mobile">
       <Amount amount={amount} />
@@ -86,11 +49,7 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
               <p>Alpha Tester: No / Yes</p>
               <p>Donator:<span className="beta"> Coming in Beta</span></p>
             </div>
-            {profilePicUrl ? (
-              <img src={profilePicUrl} alt="Profile picture" />
-            ) : (
-              <p>Loading profile picture...</p>
-            )}
+            <img src="/assets/images/Avatar.jpg" alt="Profile picture" />
           </div>
           <hr />
           <div className="achievement-container" {...handlers}>
@@ -103,6 +62,7 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
               ))}
             </div>
           </div>
+          <TonConnectButton style={{ margin: "0 auto", paddingBottom: "35px"}}/>
         </div>   
       </div>
       <div className="buttons-grid">

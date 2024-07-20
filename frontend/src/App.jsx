@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import Earn from "./earn.jsx";
 import Tasks from "./tasks.jsx";
@@ -8,7 +8,11 @@ import Donate from "./donate.jsx";
 import PC from "./pc.jsx";
 
 const App = () => {
-    if(!isMobile){
+    if(isMobile){
+        useEffect(() => {
+            document.title = "CloverLeaf | Mobile";
+        }, []);
+
         const [amount, setAmount] = useState(0);
         const [showTasks, setShowTasks] = useState(false);
         const [buyBoosts, setBuyBoosts] = useState(false);
