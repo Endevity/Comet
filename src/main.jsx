@@ -9,7 +9,7 @@ WebApp.ready();
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TonConnectUIProvider manifestUrl="http://192.168.0.124:5173/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://app.endevity.com/tonconnect-manifest.json">
       <App />
     </TonConnectUIProvider> 
   </React.StrictMode>

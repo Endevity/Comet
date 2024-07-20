@@ -1,7 +1,7 @@
 {
-  "url": "http://192.168.0.124:5173/",
+  "url": "https://app.endevity.com/",
   "name": "CloverLeaf",
-  "iconUrl": "http://192.168.0.124:5173/react.svg",
+  "iconUrl": "https://app.endevity.com/react.svg",
   "termsOfUseUrl": "",
   "privacyPolicyUrl": ""
 }
