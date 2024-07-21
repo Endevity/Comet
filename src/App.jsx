@@ -10,7 +10,7 @@ import PC from "./pc.jsx";
 const App = () => {
     if(isMobile){
         useEffect(() => {
-            document.title = "CloverLeaf | Mobile";
+            document.title = "Endevity | Mobile";
         }, []);
 
         const [amount, setAmount] = useState(0);

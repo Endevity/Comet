@@ -3,7 +3,7 @@ import QR from "./qr.jsx";
 
 const PC = () => {
    useEffect(() => {
-        document.title = "CloverLeaf | PC";
+        document.title = "Endevity | PC";
     }, []);
     
     return (
@@ -11,7 +11,7 @@ const PC = () => {
             <div className="pc-container">
                 <h1>The game is available only on mobile devices!</h1>
                 <QR />
-                <p className="telegram">@CloverLeafCoinbot</p>
+                <p className="telegram">@Endevitybot</p>
             </div>
         </div>
     );
