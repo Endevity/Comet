@@ -20,7 +20,6 @@
   --gradientcolor2: #FCF6BA;
   --gradientcolor3: #FBF587;
   --gradientcolor4: #B38728;
-  --gradientcolor5: #AA771C;
   --gradientcolor6: #C0C0C0;
   --gradientcolor7: #B1B1B1;
   --gradientcolor8: #A2A2A2;
@@ -103,7 +102,7 @@ body {
   margin: 5% 0;
   border: 3px solid transparent;
   background: conic-gradient(var(--color6), var(--color6)) padding-box,
-              conic-gradient(from -140deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+              conic-gradient(from -140deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
   border-radius: 29.63px;
   box-shadow: var(--bigshadow);
 }
@@ -166,7 +165,7 @@ body {
 
 .active {
   background: conic-gradient(var(--color6), var(--color6)) padding-box, 
-              conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+              conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
 }
 
 .inactive {
@@ -185,7 +184,7 @@ body {
   margin: auto;
   box-shadow: var(--bigshadow);
   background: conic-gradient(var(--color6), var(--color6)) padding-box,
-              conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+              conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
 }
 
 .tasks-headline {
@@ -262,7 +261,7 @@ body {
   border: 4px solid transparent;
   border-radius: 38.1px;
   box-shadow: var(--bigshadow);
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
 }
 
 .boosts-headline {
@@ -297,7 +296,7 @@ body {
   border: 4px solid transparent;
   border-radius: 38.1px;
   box-shadow: var(--bigshadow);
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
   margin: auto;
 }
 
@@ -408,7 +407,7 @@ span {
   border: 4px solid transparent;
   border-radius: 38.1px;
   box-shadow: var(--bigshadow);
-  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4), var(--gradientcolor5)) border-box;
+  background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
 }
 
 .donate-headline {
