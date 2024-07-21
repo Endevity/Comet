@@ -396,6 +396,11 @@ span {
   text-align: center;
 }
 
+.swipe {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
 /*Donate*/
 .donate-div {
   width: 90%;

@@ -62,7 +62,8 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
               ))}
             </div>
           </div>
-          <TonConnectButton style={{ margin: "0 auto", paddingBottom: "35px"}}/>
+          <p className="swipe">Swipe Left or Right</p>
+          <TonConnectButton style={{ margin: "0 auto", paddingTop: "10px", paddingBottom: "35px"}}/>
         </div>   
       </div>
       <div className="buttons-grid">

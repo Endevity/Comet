@@ -8,7 +8,7 @@ import Donate from "./donate.jsx";
 import PC from "./pc.jsx";
 
 const App = () => {
-    if(isMobile){
+    if(!isMobile){
         useEffect(() => {
             document.title = "Endevity | Mobile";
         }, []);
