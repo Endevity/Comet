@@ -4,11 +4,11 @@ import Earn from "./earn.jsx";
 import Tasks from "./tasks.jsx";
 import Boosts, { coinsPerClick } from "./boosts.jsx";
 import Profile from "./profile.jsx";
-import Donate from "./donate.jsx";
+import Shop from "./shop.jsx";
 import PC from "./pc.jsx";
 
 const App = () => {
-    if(isMobile){
+    if(!isMobile){
         useEffect(() => {
             document.title = "Comet | Mobile";
         }, []);
@@ -18,7 +18,7 @@ const App = () => {
         const [buyBoosts, setBuyBoosts] = useState(false);
         const [earnCoins, setEarnCoins] = useState(false);
         const [showProfile, setShowProfile] = useState(false);
-        const [showDonate, setShowDonate] = useState(false);
+        const [showShop, setShowShop] = useState(false);
         
         const tap = useRef(0);
         const collect = useRef(0);
@@ -28,7 +28,7 @@ const App = () => {
             setBuyBoosts(false);
             setEarnCoins(false);
             setShowProfile(false);
-            setShowDonate(false);
+            setShowShop(false);
         };
 
         const handleCoin = () => {
@@ -69,9 +69,9 @@ const App = () => {
             setShowProfile(true);
         };
 
-        const handleDonateUI = () => {
+        const handleShopUI = () => {
             resetStates();
-            setShowDonate(true);
+            setShowShop(true);
         }
 
         const formatAmount = (amount) => {
@@ -93,7 +93,7 @@ const App = () => {
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI} 
                     handleProfileUI={handleProfileUI} 
-                    handleDonateUI={handleDonateUI}/>
+                    handleShopUI={handleShopUI}/>
             );
         } else if(buyBoosts){
             return(
@@ -103,7 +103,7 @@ const App = () => {
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI} 
                     handleProfileUI={handleProfileUI} 
-                    handleDonateUI={handleDonateUI}/>
+                    handleShopUI={handleShopUI}/>
             );
         } else if(showProfile){
             return(
@@ -113,18 +113,18 @@ const App = () => {
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
                     handleProfileUI={handleProfileUI} 
-                    handleDonateUI={handleDonateUI}
+                    handleShopUI={handleShopUI}
                     />
             );
-        } else if(showDonate){
+        } else if(showShop){
             return(
-                <Donate 
+                <Shop 
                     amount={formatAmount(amount)} 
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
                     handleProfileUI={handleProfileUI}
-                    handlleDonateUI={handleDonateUI}
+                    handlleShopUI={handleShopUI}
                     />
             );
         } else {
@@ -135,7 +135,7 @@ const App = () => {
                     handleTasksUI={handleTasksUI} 
                     handleBoostsUI={handleBoostsUI} 
                     handleProfileUI={handleProfileUI} 
-                    handleDonateUI={handleDonateUI}/>
+                    handleShopUI={handleShopUI}/>
                 );
         };
     };

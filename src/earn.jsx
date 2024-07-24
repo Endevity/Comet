@@ -1,13 +1,13 @@
 import Amount from "./amount"
 import Button from "./button"
 
-const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handleProfileUI, handleDonateUI }) => {  
+const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handleProfileUI, handleShopUI }) => {  
     return (
         <div className="mobile">
             <Amount 
                 amount={amount}
             />
-            <img src="/assets/images/Token-Big.png" alt="Coin" className="earn" onTouchStart={handleTapEvent}/>
+            <img src="/assets/images/Star.png" alt="Coin" className="earn" onTouchStart={handleTapEvent}/>
             <div className="buttons-grid">
             <Button 
                     buttonClass="button inactive"
@@ -25,7 +25,7 @@ const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handlePro
                 />
                 <Button 
                     buttonClass="button active"
-                    imgSrc="/assets/images/Token-Small.png"
+                    imgSrc="/assets/images/Star.png"
                     alt="Tap"
                     name="Earn"
                 />
@@ -38,10 +38,10 @@ const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handlePro
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Donate.svg"
-                    alt="Donate"
-                    handleChange={handleDonateUI}
-                    name="Donate"
+                    imgSrc="/assets/images/Shop.svg"
+                    alt="Shop"
+                    handleChange={handleShopUI}
+                    name="Shop"
                 />
             </div>
         </div>

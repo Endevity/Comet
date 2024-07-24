@@ -4,7 +4,7 @@ import Button from "./button";
 
 export let coinsPerClick = 1;
 
-const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
+const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleShopUI }) => {
     return(
         <div className="mobile">
             <Amount 
@@ -50,7 +50,7 @@ const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDo
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Token-Small.png"
+                    imgSrc="/assets/images/Star.png"
                     alt="Tap"
                     handleChange={handleEarnUI}
                     name="Earn"
@@ -64,10 +64,10 @@ const Boosts = ({ amount, handleTasksUI, handleEarnUI, handleProfileUI, handleDo
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Donate.svg"
-                    alt="Donate"
-                    handleChange={handleDonateUI}
-                    name="Donate"
+                    imgSrc="/assets/images/Shop.svg"
+                    alt="Shop"
+                    handleChange={handleShopUI}
+                    name="Shop"
                 />
             </div>
         </div>

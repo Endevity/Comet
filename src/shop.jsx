@@ -1,16 +1,16 @@
 import Amount from "./amount";
 import Button from "./button";
 
-const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfileUI}) => {
+const Shop = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfileUI}) => {
     return(
             <div className="mobile">
                 <Amount 
                     amount={amount}
                 />
-                <div className="donate-div">
-                    <p className="donate-headline">Donate</p>
+                <div className="shop-div">
+                    <p className="shop-headline">Shop</p>
                     <hr />
-                    <div className="donate-container">
+                    <div className="shop-container">
                         <p>Coming in Beta</p>
                     </div>   
                 </div>
@@ -31,7 +31,7 @@ const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handlePro
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Token-Small.png"
+                    imgSrc="/assets/images/Star.png"
                     alt="Tap"
                     handleChange={handleEarnUI}
                     name="Earn"
@@ -45,13 +45,13 @@ const Donate = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handlePro
                 />
                 <Button 
                     buttonClass="button active"
-                    imgSrc="/assets/images/Donate.svg"
-                    alt="Donate"
-                    name="Donate"
+                    imgSrc="/assets/images/Shop.svg"
+                    alt="Shop"
+                    name="Shop"
                 />
                 </div>
             </div>
         );
     };
         
-export default Donate
+export default Shop

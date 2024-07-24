@@ -17,7 +17,7 @@ const achievementSets = [
   ],
 ];
 
-const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDonateUI }) => {
+const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI }) => {
   const [currentSet, setCurrentSet] = useState(0);
 
   const handleSwipeLeft = () => {
@@ -62,7 +62,6 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
               ))}
             </div>
           </div>
-          <p className="swipe">Swipe Left or Right</p>
           <TonConnectButton style={{ margin: "0 auto", paddingTop: "10px", paddingBottom: "35px"}}/>
         </div>   
       </div>
@@ -83,7 +82,7 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
         />
         <Button 
           buttonClass="button inactive"
-          imgSrc="/assets/images/Token-Small.png"
+          imgSrc="/assets/images/Star.png"
           alt="Tap"
           handleChange={handleEarnUI}
           name="Earn"
@@ -96,10 +95,10 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleDo
         />
         <Button 
           buttonClass="button inactive"
-          imgSrc="/assets/images/Donate.svg"
-          alt="Donate"
-          handleChange={handleDonateUI}
-          name="Donate"
+          imgSrc="/assets/images/Shop.svg"
+          alt="Shop"
+          handleChange={handleShopUI}
+          name="Shop"
         />
       </div>
     </div>

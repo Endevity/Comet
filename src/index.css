@@ -396,13 +396,8 @@ span {
   text-align: center;
 }
 
-.swipe {
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-
-/*Donate*/
-.donate-div {
+/*Shop*/
+.shop-div {
   width: 90%;
   height: 50%;
   text-transform: uppercase;
@@ -415,7 +410,7 @@ span {
   background: conic-gradient(var(--color6), var(--color6)) padding-box, conic-gradient(from 225deg, var(--gradientcolor1), var(--gradientcolor2), var(--gradientcolor3), var(--gradientcolor4)) border-box;
 }
 
-.donate-headline {
+.shop-headline {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,20 +420,20 @@ span {
   font-size: 18px;
 }
 
-.donate-div hr {
+.shop-div hr {
   width: 90%;
   margin: auto;
   border: 2px solid transparent;
   background: linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) padding-box, linear-gradient(var(--gradientcolor6), var(--gradientcolor7), var(--gradientcolor8), var(--gradientcolor9)) border-box;
 }
 
-.donate-container {
+.shop-container {
   width: 90%;
   height: auto;
   margin: 10% auto;
 }
 
-.donate-container p{
+.shop-container p{
   color: crimson;
 }
 

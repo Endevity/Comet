@@ -3,7 +3,7 @@ import Amount from "./amount";
 import Button from "./button";
 import Task from "./task";
 
-const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, handleProfileUI, handleDonateUI }) => {
+const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, handleProfileUI, handleShopUI }) => {
 
     
 
@@ -70,7 +70,7 @@ const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, 
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Token-Small.png"
+                    imgSrc="/assets/images/Star.png"
                     alt="Tap"
                     handleChange={handleEarnUI}
                     name="Earn"
@@ -84,10 +84,10 @@ const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, 
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Donate.svg"
-                    alt="Donate"
-                    handleChange={handleDonateUI}
-                    name="Donate"
+                    imgSrc="/assets/images/Shop.svg"
+                    alt="Shop"
+                    handleChange={handleShopUI}
+                    name="Shop"
                 />
             </div>
         </div>
