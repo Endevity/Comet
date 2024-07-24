@@ -8,7 +8,7 @@ import Shop from "./shop.jsx";
 import PC from "./pc.jsx";
 
 const App = () => {
-    if(!isMobile){
+    if(isMobile){
         useEffect(() => {
             document.title = "Comet | Mobile";
         }, []);
