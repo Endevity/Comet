@@ -3,7 +3,7 @@ import { QRCode } from "react-qrcode-logo";
 const QR = () => {
     return (
         <QRCode
-            value="https://t.me/Cometcoinbot"
+            value="https://t.me/TheComet_bot"
             size={200}
             bgColor="#FFFFFF"
             fgColor="#000000"

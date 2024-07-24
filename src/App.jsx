@@ -10,7 +10,7 @@ import PC from "./pc.jsx";
 const App = () => {
     if(isMobile){
         useEffect(() => {
-            document.title = "Cometcoin | Mobile";
+            document.title = "Comet | Mobile";
         }, []);
 
         const [amount, setAmount] = useState(0);
