@@ -51,7 +51,7 @@ const Profile = ({ amount, username, tap, collect, handleBoostsUI, handleEarnUI,
         <div className="profile-container">
           <div className="profile-info">
             <div className="profile-info-grid">
-              <p>Username: <span>{username ? username : "Anonymous"}</span></p>
+              <p>Username: <span>{username}</span></p>
               <p>Tapped: <span>{tap.current}</span></p>
               <p>Collected: <span>{collect.current}</span></p>
               <p>Comets: <span>{formattedComets}</span></p>
