@@ -119,8 +119,8 @@ const App = () => {
                     amount={amount} 
                     tap={tap}
                     collect={collect}
-                    username={username}
-                    id={id} 
+                    username={userDataPropTypes.username}
+                    id={userDataPropTypes.id}
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
