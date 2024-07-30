@@ -120,7 +120,6 @@ const App = () => {
                     tap={tap}
                     collect={collect}
                     username={userDataPropTypes.username}
-                    id={userDataPropTypes.id}
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}

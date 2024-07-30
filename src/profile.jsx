@@ -17,7 +17,7 @@ const achievementSets = [
   ],
 ];
 
-const Profile = ({ amount, username, id, tap, collect, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI }) => {
+const Profile = ({ amount, username, tap, collect, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI }) => {
   const [currentSet, setCurrentSet] = useState(0);
   const [comets, setComets] = useState(0);
 
@@ -53,7 +53,6 @@ const Profile = ({ amount, username, id, tap, collect, handleBoostsUI, handleEar
             <div className="profile-info-grid">
               <p>Username: <span>{username ? username : "Anonymous"}</span></p>
               <p>Tapped: <span>{tap.current}</span></p>
-              <p>Tapped: <span>{id}</span></p>
               <p>Collected: <span>{collect.current}</span></p>
               <p>Comets: <span>{formattedComets}</span></p>
             </div>
