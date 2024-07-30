@@ -119,7 +119,7 @@ const App = () => {
                     amount={amount} 
                     tap={tap}
                     collect={collect}
-                    username={userDataPropTypes.username}
+                    username={userData ? userData.username : 'Guest'}
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
