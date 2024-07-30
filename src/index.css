@@ -355,11 +355,15 @@ span {
   grid-template-rows: repeat(4, 25%);
   align-items: center;
   text-align: left;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .profile-info-grid p {
   margin: 3% 0;
+}
+
+p > span {
+  margin-left: 5px;
 }
 
 .achievement-container {

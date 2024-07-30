@@ -4,9 +4,6 @@ import Button from "./button";
 import Task from "./task";
 
 const Tasks = ({ amount, setAmount, tap, collect, handleBoostsUI, handleEarnUI, handleProfileUI, handleShopUI }) => {
-
-    
-
     return (
         <div className="mobile">
             <Amount 

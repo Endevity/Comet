@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import Amount from "./amount";
@@ -17,8 +17,15 @@ const achievementSets = [
   ],
 ];
 
-const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI, username, photo }) => {
+const Profile = ({ amount, username, id, tap, collect, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI }) => {
   const [currentSet, setCurrentSet] = useState(0);
+  const [comets, setComets] = useState(0);
+
+  useEffect(() => {
+    setComets(c => (c + amount) / 1000);
+  }, [amount]);
+
+  const formattedComets = parseFloat(comets.toFixed(3));
 
   const handleSwipeLeft = () => {
     setCurrentSet((c) => (c + 1) % achievementSets.length);
@@ -44,12 +51,12 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleSh
         <div className="profile-container">
           <div className="profile-info">
             <div className="profile-info-grid">
-              <p>Username: <span>{username}</span></p>
-              <p>Playtime: 00D 00H 00M</p>
-              <p>Alpha Tester: No / Yes</p>
-              <p>Donator:<span className="beta"> Coming in Beta</span></p>
+              <p>Username: <span>{username ? username : "Anonymous"}</span></p>
+              <p>Tapped: <span>{tap.current}</span></p>
+              <p>Tapped: <span>{id}</span></p>
+              <p>Collected: <span>{collect.current}</span></p>
+              <p>Comets: <span>{formattedComets}</span></p>
             </div>
-            <img src={photo} alt="Picture" />
           </div>
           <hr />
           <div className="achievement-container" {...handlers}>

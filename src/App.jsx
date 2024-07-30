@@ -12,7 +12,6 @@ import PC from "./pc.jsx";
 const userDataPropTypes = PropTypes.shape({
     id: PropTypes.number.isRequired,
     username: PropTypes.string.isRequired,
-    photo_url: PropTypes.string.isRequired
 });
 
 const App = () => {
@@ -89,17 +88,10 @@ const App = () => {
             setShowShop(true);
         };
 
-        const formatAmount = (amount) => {
-            if (amount >= 1000000) {
-                return (amount / 1000000).toFixed(3) + " M";
-            }
-            return amount.toString();
-        };
-
         if (showTasks) {
             return (
                 <Tasks 
-                    amount={formatAmount(amount)} 
+                    amount={amount} 
                     setAmount={setAmount}
                     tap={tap}
                     collect={collect} 
@@ -113,7 +105,7 @@ const App = () => {
         } else if (buyBoosts) {
             return (
                 <Boosts 
-                    amount={formatAmount(amount)}
+                    amount={amount}
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI} 
@@ -123,21 +115,23 @@ const App = () => {
             );
         } else if (showProfile) {
             return (
-                <Profile 
-                    amount={formatAmount(amount)} 
+                <Profile
+                    amount={amount} 
+                    tap={tap}
+                    collect={collect}
+                    username={username}
+                    id={id} 
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
                     handleProfileUI={handleProfileUI} 
                     handleShopUI={handleShopUI}
-                    username={userData.username}
-                    photo={userData.photo_url}
                 />
             );
         } else if (showShop) {
             return (
                 <Shop 
-                    amount={formatAmount(amount)} 
+                    amount={amount} 
                     handleBoostsUI={handleBoostsUI} 
                     handleTasksUI={handleTasksUI} 
                     handleEarnUI={handleEarnUI}
@@ -148,7 +142,7 @@ const App = () => {
         } else {
             return (
                 <Earn 
-                    amount={formatAmount(amount)} 
+                    amount={amount} 
                     handleTapEvent={handleTapEvent}
                     handleTasksUI={handleTasksUI} 
                     handleBoostsUI={handleBoostsUI} 
