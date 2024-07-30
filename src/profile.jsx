@@ -17,7 +17,7 @@ const achievementSets = [
   ],
 ];
 
-const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI }) => {
+const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleShopUI, username, photo }) => {
   const [currentSet, setCurrentSet] = useState(0);
 
   const handleSwipeLeft = () => {
