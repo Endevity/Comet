@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import { TonConnectButton } from "@tonconnect/ui-react";
 import Amount from "./amount";
 import Button from "./button";
 
@@ -68,7 +67,6 @@ const Profile = ({ amount, username, tap, collect, handleBoostsUI, handleEarnUI,
               ))}
             </div>
           </div>
-          <TonConnectButton style={{ margin: "0 auto", paddingTop: "10px", paddingBottom: "35px"}}/>
         </div>   
       </div>
       <div className="buttons-grid">
