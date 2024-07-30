@@ -44,12 +44,12 @@ const Profile = ({ amount, handleBoostsUI, handleEarnUI, handleTasksUI, handleSh
         <div className="profile-container">
           <div className="profile-info">
             <div className="profile-info-grid">
-              <p>Username:<span> @RaiRaijin</span></p>
+              <p>Username: <span>{username}</span></p>
               <p>Playtime: 00D 00H 00M</p>
               <p>Alpha Tester: No / Yes</p>
               <p>Donator:<span className="beta"> Coming in Beta</span></p>
             </div>
-            <img src="/assets/images/Avatar.jpg" alt="Profile picture" />
+            <img src={photo} alt="Picture" />
           </div>
           <hr />
           <div className="achievement-container" {...handlers}>
