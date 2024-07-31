@@ -9,7 +9,9 @@ dotenv.config();
 const port = process.env.PORT;
 const URI = process.env.DB_URI;
 
-mongoose.connect(URI);
+mongoose.connect(URI)
+  .then(console.log("Connected to MongoDB"))
+  .catch(err => console.log("Failed to connect to MongoDB", err));
 
 const app = express();
 app.use(cors());
