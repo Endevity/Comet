@@ -7,7 +7,7 @@ const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handlePro
             <Amount 
                 amount={amount}
             />
-            <img src="/assets/images/Star.png" alt="Coin" className="earn" onClick={handleTapEvent}/>
+            <img src="/assets/images/Star.png" alt="Coin" className="earn" onTouchStart={handleTapEvent}/>
             <div className="buttons-grid">
             <Button 
                     buttonClass="button inactive"
