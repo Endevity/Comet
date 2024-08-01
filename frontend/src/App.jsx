@@ -32,7 +32,7 @@ const App = () => {
             const user = WebApp.initDataUnsafe.user;
             setUserData(user);
 
-            axios.post("http://localhost:3000/api/users", {
+            axios.post("http://localhost:3001/api/users", {
                 id: user.id,
                 username: user.username
             })
