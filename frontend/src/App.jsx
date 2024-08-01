@@ -27,8 +27,6 @@ const App = () => {
     const tap = useRef(0);
     const collect = useRef(0);
 
-    const telegram = window.Telegram.WebApp;
-
     useEffect(() => {
         const user = WebApp.initDataUnsafe.user;
 
@@ -50,15 +48,15 @@ const App = () => {
 
     useEffect(() => {
         if(!WebApp.isExpanded){
-            telegram.expand();
+            WebApp.expand();
         };
 
-        if(WebApp.isVerticalSwipesEnabled){
-            telegram.disableVerticalSwipes();
-        }
-
-        telegram.enableClosingConfirmation();
+        WebApp.enableClosingConfirmation();
     }, []);
+
+    if(WebApp.isVerticalSwipesEnabled){
+        WebApp.disableVerticalSwipes();
+    }
 
     if (isMobile) {
         useEffect(() => {
