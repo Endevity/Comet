@@ -47,7 +47,10 @@ const App = () => {
     }, []);
 
     if(!WebApp.isExpanded){
-        window.Telegram.WebApp.expand();
+        const telegram = window.Telegram.WebApp
+        telegram.expand();
+        telegram.disableVerticalSwipes();
+        telegram.enableClosingConfirmation();
     };
 
     if (isMobile) {
