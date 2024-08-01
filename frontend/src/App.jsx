@@ -52,7 +52,11 @@ const App = () => {
         if(!WebApp.isExpanded){
             telegram.expand();
         };
-        
+
+        if(WebApp.isVerticalSwipesEnabled){
+            telegram.disableVerticalSwipes();
+        }
+
         telegram.enableClosingConfirmation();
     }, []);
 
