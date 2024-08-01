@@ -51,12 +51,13 @@ const App = () => {
             WebApp.expand();
         };
 
+        if(WebApp.isVerticalSwipesEnabled){
+            WebApp.disableVerticalSwipes();
+        };
+
         WebApp.enableClosingConfirmation();
     }, []);
 
-    if(WebApp.isVerticalSwipesEnabled){
-        WebApp.disableVerticalSwipes();
-    }
 
     if (isMobile) {
         useEffect(() => {
