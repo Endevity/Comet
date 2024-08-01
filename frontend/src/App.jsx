@@ -52,9 +52,8 @@ const App = () => {
         if(!WebApp.isExpanded){
             telegram.expand();
         };
-
-        telegram.disableVerticalSwipes();
         
+        telegram.enableClosingConfirmation();
     }, []);
 
     if (isMobile) {
