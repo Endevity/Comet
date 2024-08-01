@@ -54,7 +54,7 @@ const App = () => {
         };
 
         telegram.disableVerticalSwipes();
-        telegram.enableClosingConfirmation();
+        
     }, []);
 
     if (isMobile) {
