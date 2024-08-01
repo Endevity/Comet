@@ -28,8 +28,9 @@ const App = () => {
     const collect = useRef(0);
 
     useEffect(() => {
-        if (WebApp.initDataUnsafe.user) {
-            const user = WebApp.initDataUnsafe.user;
+        const user = WebApp.initDataUnsafe.user;
+
+        if (user) {
             setUserData(user);
 
             axios.post("http://localhost:3001/api/users", {
@@ -44,6 +45,10 @@ const App = () => {
             });
         }
     }, []);
+
+    if(!WebApp.isExpanded){
+        window.Telegram.WebApp.expand();
+    };
 
     if (isMobile) {
         useEffect(() => {
