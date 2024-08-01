@@ -4,6 +4,13 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const User = require('./models/user');
 
+const corsOptions = {
+  origin: 'https://app.endevity.com',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+  credentials: true
+};
+
 dotenv.config();
 
 const port = process.env.PORT;
@@ -14,7 +21,7 @@ mongoose.connect(URI)
   .catch(err => console.log("Failed to connect to MongoDB", err));
 
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.post('/api/users', async (req, res) => {
