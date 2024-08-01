@@ -31,7 +31,7 @@ const Shop = ({ amount, handleBoostsUI, handleTasksUI, handleEarnUI, handleProfi
                 />
                 <Button 
                     buttonClass="button inactive"
-                    imgSrc="/assets/images/Star.png"
+                    imgSrc="/assets/images/Comet.svg"
                     alt="Tap"
                     handleChange={handleEarnUI}
                     name="Earn"

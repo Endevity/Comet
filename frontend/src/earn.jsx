@@ -7,7 +7,7 @@ const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handlePro
             <Amount 
                 amount={amount}
             />
-            <img src="/assets/images/Star.png" alt="Coin" className="earn" onTouchStart={handleTapEvent}/>
+            <img src="/assets/images/Comet.svg" alt="Coin" className="earn" onTouchStart={handleTapEvent}/>
             <div className="buttons-grid">
             <Button 
                     buttonClass="button inactive"
@@ -25,7 +25,7 @@ const Earn = ({ amount, handleTapEvent, handleTasksUI, handleBoostsUI, handlePro
                 />
                 <Button 
                     buttonClass="button active"
-                    imgSrc="/assets/images/Star.png"
+                    imgSrc="/assets/images/Comet.svg"
                     alt="Tap"
                     name="Earn"
                 />
