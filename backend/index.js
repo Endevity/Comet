@@ -19,6 +19,7 @@ app.use(express.json());
 
 app.post('/api/users', async (req, res) => {
   const { id, username } = req.body;
+  console.log(`Received data: ${id}, ${username}`, req.body);
   
   try {
     const user = await User.findByIdAndUpdate(
